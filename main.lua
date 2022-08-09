@@ -1,3 +1,5 @@
+
+function()
 Maple = {
 	isInit = false,
 	ThemeColor = Color3.fromRGB(29, 66, 153),
@@ -125,4 +127,5 @@ newToggleButton = function(Parent, Size, Position, Text, ToggledFunc, NotToggled
     end)
     
     return TextButton
+end
 end
