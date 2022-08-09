@@ -4,8 +4,6 @@ Maple = {
 	ThemeFont = Enum.Font.Code
 }
 
-script = Instance.new("ModuleScript")
-
 local Maple.ApplyTheme = function(UI, type = "Filled")
     UI.BorderColor3 = Maple.ThemeColor
     UI.BorderMode = Enum.BorderMode.Inset
