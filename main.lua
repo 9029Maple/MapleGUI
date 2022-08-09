@@ -126,5 +126,3 @@ Maple.newToggleButton = function(Parent, Size, Position, Text, ToggledFunc, NotT
     
     return TextButton
 end
-
-return Maple
