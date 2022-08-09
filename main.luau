@@ -57,7 +57,7 @@ newFrame = function(Parent, Size, Position)
 end
 
 newScrollingFrame = function(Parent, Size, Position)
-    local ScrollingFrame = Instance.new("Frame")
+    local ScrollingFrame = Instance.new("ScrollingFrame")
     ScrollingFrame.Parent = Parent
     ScrollingFrame.Size = Size
     ScrollingFrame.Position = Position
@@ -65,7 +65,7 @@ newScrollingFrame = function(Parent, Size, Position)
     ScrollingFrame.CanvasSize = Size
     ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
     ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y
-    applyTheme(TextLabel, "Normal")
+    applyTheme(ScrollingFrame, "Normal")
     
     return ScrollingFrame
 end
