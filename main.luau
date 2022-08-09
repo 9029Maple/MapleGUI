@@ -36,7 +36,7 @@ init = function(Size)
     local Main = Instance.new("Frame")
     Main.Name = "Main"
     Main.Parent = ScreenGUI
-    Maple.applyTheme(Main, "Normal")
+    applyTheme(Main, "Normal")
     Main.Size = Size
     Main.Active = true
     Main.Draggable = true
