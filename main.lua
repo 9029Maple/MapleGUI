@@ -1,4 +1,4 @@
-local Maple = {
+Maple = {
 	isInit = false,
 	ThemeColor = Color3.fromRGB(29, 66, 153),
 	ThemeFont = Enum.Font.Code
