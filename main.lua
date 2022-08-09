@@ -7,7 +7,7 @@ local Maple = {
 -- thou can modify the code as ya see fit.
 -- may thou question my. thy shall dm me, mapleSyrup#5691. (lol im getting weird pls help!!)
 
-Maple.ApplyTheme = function(Ui, Type)
+applyTheme = function(Ui, Type)
     Ui.BorderColor3 = Maple.ThemeColor
     Ui.BorderMode = Enum.BorderMode.Outline
     Ui.BorderSizePixel = 1
@@ -21,12 +21,12 @@ Maple.ApplyTheme = function(Ui, Type)
     return Ui.BackgroundColor3
 end
 
-Maple.udim = function(x, y)
+Udim = function(x, y)
     return UDim2.new(0, x, 0, y) -- size by pixels, scales no.
 end
 
-Maple.init = function(Size)
-    if Maple.isInit then return end-- initialized already, shall return none.
+init = function(Size)
+    if Config.isInit then return end-- initialized already, shall return none.
     
     local ScreenGUI = Instance.new("ScreenGui")
     ScreenGUI.Parent = game.CoreGui
@@ -45,17 +45,17 @@ Maple.init = function(Size)
     return Main
 end
 
-Maple.newFrame = function(Parent, Size, Position)
+newFrame = function(Parent, Size, Position)
     local Frame = Instance.new("Frame")
     Frame.Parent = Parent
     Frame.Size = Size
     Frame.Position = Position
-    Maple.applyTheme(Frame, "Normal")
+    applyTheme(Frame, "Normal")
     
     return Frame
 end
 
-Maple.newTextLabel = function(Parent, Size, Position, Text)
+newTextLabel = function(Parent, Size, Position, Text)
     local TextLabel = Instance.new("TextLabel")
     TextLabel.Parent = Parent
     TextLabel.Size = Size
@@ -65,12 +65,12 @@ Maple.newTextLabel = function(Parent, Size, Position, Text)
     TextLabel.TextSize = 14
     TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-    Maple.applyTheme(TextLabel, "Normal")
+    applyTheme(TextLabel, "Normal")
     
     return TextLabel
 end
 
-Maple.newTextButton = function(Parent, Size, Position, Text, Function)
+newTextButton = function(Parent, Size, Position, Text, Function)
     local TextButton = Instance.new("TextButton")
     TextButton.Parent = Parent
     TextButton.Size = Size
@@ -81,7 +81,7 @@ Maple.newTextButton = function(Parent, Size, Position, Text, Function)
     TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextButton.AutoButtonColor = false
     TextButton.TextXAlignment = Enum.TextXAlignment.Left
-    local DefaultColor = Maple.applyTheme(TextButton, "Normal")
+    local DefaultColor = applyTheme(TextButton, "Normal")
     
     TextButton.MouseEnter:Connect(function()
         TextButton.BackgroundColor3 = Maple.ThemeColor
@@ -96,7 +96,7 @@ Maple.newTextButton = function(Parent, Size, Position, Text, Function)
     return TextButton
 end
 
-Maple.newToggleButton = function(Parent, Size, Position, Text, ToggledFunc, NotToggledFunc)
+newToggleButton = function(Parent, Size, Position, Text, ToggledFunc, NotToggledFunc)
     local TextButton = Instance.new("TextButton")
     TextButton.Parent = Parent
     TextButton.Size = Size
@@ -107,7 +107,7 @@ Maple.newToggleButton = function(Parent, Size, Position, Text, ToggledFunc, NotT
     TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     TextButton.AutoButtonColor = false
     TextButton.TextXAlignment = Enum.TextXAlignment.Left
-    local DefaultColor = Maple.applyTheme(TextButton, "Normal")
+    local DefaultColor = applyTheme(TextButton, "Normal")
     
     local Toggled = false
     
