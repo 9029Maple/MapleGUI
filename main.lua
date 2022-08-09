@@ -83,7 +83,5 @@ local Maple.NewTextButton = function(Parent, Size, Position, Text)
     return TextButton
 end
 
-Maple.Init()
-
 return Maple
 
