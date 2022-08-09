@@ -22,7 +22,7 @@ applyTheme = function(Ui, Type)
     return Ui.BackgroundColor3
 end
 
-Udim = function(x, y)
+udim = function(x, y)
     return UDim2.new(0, x, 0, y) -- size by pixels, scales no.
 end
 
@@ -54,6 +54,20 @@ newFrame = function(Parent, Size, Position)
     applyTheme(Frame, "Normal")
     
     return Frame
+end
+
+newScrollingFrame = function(Parent, Size, Position)
+    local ScrollingFrame = Instance.new("Frame")
+    ScrollingFrame.Parent = Parent
+    ScrollingFrame.Size = Size
+    ScrollingFrame.Position = Position
+    ScrollingFrame.ScrollBarThickness = 0
+    ScrollingFrame.CanvasSize = Size
+    ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y
+    applyTheme(TextLabel, "Normal")
+    
+    return ScrollingFrame
 end
 
 newTextLabel = function(Parent, Size, Position, Text)
