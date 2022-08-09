@@ -27,7 +27,7 @@ Udim = function(x, y)
 end
 
 init = function(Size)
-    if Config.isInit then return end-- initialized already, shall return none.
+    if Maple.isInit then return end-- initialized already, shall return none.
     
     local ScreenGUI = Instance.new("ScreenGui")
     ScreenGUI.Parent = game.CoreGui
